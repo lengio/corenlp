@@ -4,7 +4,7 @@ Bundler.require
 
 module Corenlp
   class Treebank
-    attr_accessor :raw_text, :filenames, :output_directory, :summary_file, :threads_to_use, :java_max_memory, :sentences
+    attr_accessor :raw_text, :filenames, :output_directory, :summary_file, :threads_to_use, :java_max_memory, :sentences, :deps_dir
 
     def initialize(attrs = {})
       self.raw_text = attrs[:raw_text] || ""
@@ -15,6 +15,7 @@ module Corenlp
       self.threads_to_use = attrs[:threads_to_use] || 4
       self.java_max_memory = attrs[:java_max_memory] || "-Xmx3g"
       self.sentences = []
+      self.deps_dir = attrs[:deps_dir] || "./lib/ext"
     end
 
     def write_output_file_and_summary_file
@@ -25,8 +26,7 @@ module Corenlp
     end
 
     def process_files_with_stanford_corenlp
-      deps = "./lib/ext" # dependencies directory: JARs, model files, taggers, etc.
-      classpath = "#{deps}/stanford-corenlp-3.4.jar:#{deps}/stanford-corenlp-3.4-models.jar:#{deps}/xom.jar:#{deps}/joda-time.jar:#{deps}/jollyday.jar:#{deps}/ejml-0.23.jar"
+      classpath = "#{deps_dir}/stanford-corenlp-3.4.jar:#{deps_dir}/stanford-corenlp-3.4-models.jar:#{deps_dir}/xom.jar:#{deps_dir}/joda-time.jar:#{deps_dir}/jollyday.jar:#{deps_dir}/ejml-0.23.jar"
       stanford_bin = "edu.stanford.nlp.pipeline.StanfordCoreNLP"
       annotators = "tokenize,ssplit,pos,lemma,parse,ner"
 

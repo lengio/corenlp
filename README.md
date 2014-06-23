@@ -38,11 +38,12 @@ The following code will build up a treebank structure for the raw text "Put the 
 
 ## Options
 
-The Treebank object can be initialize with various options.
+The Treebank object can be initialized with various options.
 
  * `java_max_memory` - set to 3GB by default. This can be customized via the Treebank initializer to be `-Xmx2g`, which would use a max of 2GB of memory, for example.
  * `threads_to_use` - number of threads Stanford CoreNLP uses to parse text. This is set to 4 by default. This option is passed to the Java executable.
  * `output_directory` - by default this is `./tmp/language_processing`, which already exists. This is where Stanford CoreNLP XML files are placed. These XML files represented the structured parser output.
+ * `deps_dir` - the directory where the Stanford CoreNLP dependencies files are. By default this is './lib/ext`.
 
 ## Tests
 
