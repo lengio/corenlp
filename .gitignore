@@ -1,0 +1,14 @@
+*.gem
+.bundle
+.config
+.ruby-gemset
+.ruby-version
+coverage
+doc
+Gemfile.lock
+log/*.log
+tmp/language_processing/*
+!tmp/language_processing/.keep
+lib/ext/*
+!lib/ext/.keep
+tags
