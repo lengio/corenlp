@@ -6,10 +6,12 @@ require 'corenlp/version'
 Gem::Specification.new do |spec|
   spec.name          = "corenlp"
   spec.version       = Corenlp::VERSION
+  spec.licenses      = ['MIT']
+  spec.description   = 'Corenlp is a Ruby gem that uses the Stanford CoreNLP Java tools to parse text.'
   spec.authors       = ["Lengio Corporation"]
-  spec.homepage      = ""
+  spec.homepage      = "http://leng.io/"
   spec.email         = ["engineering@leng.io"]
-  spec.summary       = %q{}
+  spec.summary       = %q{Corenlp is a Ruby gem that uses the Stanford CoreNLP Java tools to parse text.}
   spec.files         = Dir['lib/**/*'] + Dir['test/**/*'] + ['README.md']
   spec.test_files    = ["test"]
   spec.require_paths = ["lib"]
