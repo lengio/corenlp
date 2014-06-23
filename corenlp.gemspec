@@ -12,7 +12,7 @@ Gem::Specification.new do |spec|
   spec.homepage      = "https://github.com/lengio/corenlp"
   spec.email         = ["engineering@leng.io"]
   spec.summary       = %q{Corenlp is a Ruby gem that uses the Stanford CoreNLP Java tools to parse text.}
-  spec.files         = Dir['lib/corenlp/*'] + Dir['lib/tasks/'] + Dir['test/**/*'] + ['README.md']
+  spec.files         = ['lib/corenlp.rb'] + Dir['lib/corenlp/*'] + Dir['lib/tasks/*'] + Dir['test/**/*'] + ['README.md']
   spec.test_files    = ["test"]
   spec.require_paths = ["lib"]
 

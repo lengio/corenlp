@@ -3,6 +3,7 @@ Bundler.require
 require 'net/http'
 require 'fileutils'
 require 'uri'
+require 'zip'
 
 module Corenlp
   class Downloader
@@ -15,7 +16,7 @@ module Corenlp
 
     def extract
       puts "extracting file..."
-      Zip::ZipFile.open(local_file) do |zip_file|
+      Zip::File.open(local_file) do |zip_file|
         zip_file.each do |file|
           file_path = File.join(destination, file.name)
           zip_file.extract(file, file_path) unless File.exist?(file_path)
@@ -39,7 +40,7 @@ module Corenlp
 
     def download
       return unless url
-      puts "downloading zip file from url #{url} to #{destination}..."
+      puts "downloading zip file from url #{url}. Extracting files to #{destination}..."
       self.local_file = File.basename(url)
       uri = URI.parse(url)
       if local_file && uri
