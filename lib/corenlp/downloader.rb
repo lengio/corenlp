@@ -1,5 +1,6 @@
+require 'bundler'
+Bundler.require
 require 'net/http'
-require 'zip/zip'
 require 'fileutils'
 require 'uri'
 
