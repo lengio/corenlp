@@ -66,6 +66,10 @@ This gem was developed at Lengio by Andy Atkinson as an extraction of some of ou
   * Kamran Khan
   * Rodolfo Carvalho
 
+## Rubygems badge
+
+[![Gem Version](https://badge.fury.io/rb/corenlp.svg)](http://badge.fury.io/rb/corenlp)
+
 ## License
 
 The MIT License (MIT)
