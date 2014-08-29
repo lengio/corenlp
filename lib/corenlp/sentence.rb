@@ -3,10 +3,10 @@ module Corenlp
     attr_accessor :index, :tokens, :token_dependencies, :parse_tree_raw
 
     def initialize(attrs = {})
-      @index = attrs[:index]
-      @tokens = []
-      @token_dependencies = []
-      @parse_tree_raw = ''
+      self.index = attrs[:index]
+      self.tokens = []
+      self.token_dependencies = []
+      self.parse_tree_raw = ''
     end
 
     def governor_dependencies(token)

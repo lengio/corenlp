@@ -8,6 +8,7 @@ require 'zip'
 module Corenlp
   class Downloader
     attr_accessor :url, :destination, :local_file
+
     def initialize(url, destination)
       self.url = url
       self.destination = destination

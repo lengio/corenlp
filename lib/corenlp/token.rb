@@ -3,12 +3,12 @@ module Corenlp
     attr_accessor :index, :text, :penn_treebank_tag, :stanford_lemma, :type, :ner
 
     def initialize(attrs = {})
-      @index = attrs[:index]
-      @text = attrs[:text]
-      @penn_treebank_tag = attrs[:penn_treebank_tag]
-      @stanford_lemma = attrs[:stanford_lemma]
-      @type = attrs[:type]
-      @ner = attrs[:ner]
+      self.index = attrs[:index]
+      self.text = attrs[:text]
+      self.penn_treebank_tag = attrs[:penn_treebank_tag]
+      self.stanford_lemma = attrs[:stanford_lemma]
+      self.type = attrs[:type]
+      self.ner = attrs[:ner]
     end
 
     IGNORED_ENTITIES = ["PERSON"]

@@ -3,9 +3,9 @@ module Corenlp
     attr_accessor :dependent, :governor, :relation
 
     def initialize(attrs = {})
-      @dependent = attrs[:dependent]
-      @governor = attrs[:governor]
-      @relation = attrs[:relation]
+      self.dependent = attrs[:dependent]
+      self.governor = attrs[:governor]
+      self.relation = attrs[:relation]
     end
   end
 end
