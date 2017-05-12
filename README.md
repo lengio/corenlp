@@ -1,6 +1,6 @@
-# Corenlp
+# CoreNLP
 
-Corenlp is a Ruby gem that uses the [Stanford CoreNLP Java tools](http://nlp.stanford.edu/software/corenlp.shtml) to parse text. The gem takes the output from Stanford CoreNLP and builds objects in Ruby, for use in Ruby applications.
+CoreNLP is a Ruby gem that uses the [Stanford CoreNLP Java tools](http://nlp.stanford.edu/software/corenlp.shtml) to parse text. The gem takes the output from Stanford CoreNLP and builds objects in Ruby, for use in Ruby applications.
 
 Stanford CoreNLP requires Java version 1.6 or higher. Installations vary so that will need to be installed by the developer on their own before continuing.
 
@@ -43,7 +43,7 @@ The Treebank object can be initialized with various options.
  * `java_max_memory` - set to 3GB by default. This can be customized via the Treebank initializer to be `-Xmx2g`, which would use a max of 2GB of memory, for example.
  * `threads_to_use` - number of threads Stanford CoreNLP uses to parse text. This is set to 4 by default. This option is passed to the Java executable.
  * `output_directory` - by default this is `./tmp/language_processing`, which already exists. This is where Stanford CoreNLP XML files are placed. These XML files represented the structured parser output.
- * `deps_dir` - the directory where the Stanford CoreNLP dependencies files are. By default this is './lib/ext`.
+ * `deps_dir` - the directory where the Stanford CoreNLP dependencies files are. By default this is `./lib/ext`.
 
 ## Tests
 
@@ -70,27 +70,3 @@ This gem was developed at Lengio by Andy Atkinson as an extraction of some of ou
 ## Rubygems badge
 
 [![Gem Version](https://badge.fury.io/rb/corenlp.svg)](http://badge.fury.io/rb/corenlp)
-
-## License
-
-The MIT License (MIT)
-
-Copyright (c) 2014 Lengio Corporation
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in
-all copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-THE SOFTWARE.
